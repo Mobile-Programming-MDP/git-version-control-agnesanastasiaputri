@@ -1,0 +1,76 @@
+void main() {
+  String nama = "Agnes";
+  int usia = 18;
+  
+  print("Hallo, nama saya $nama dan usia saya $usia tahun");
+  print("Hallo, nama saya "+ nama +" dan usia saya "+ usia.toString() +" tahun");
+  
+  var alamat = "Jl. Jendral Sudirman";
+  var alamat2 = "Jl. Rajawali";
+  print(alamat.runtimeType);
+  print(alamat2.runtimeType);
+  
+  //Collection 
+  var numberList = [1,2,3,4]; //list
+  var stringList = ["Hello", "Universitas MDP", "Dart"];
+  print(stringList);
+  
+  var dinamicList = [1, "Universitas MDP", true];
+  print(dinamicList);
+  
+  var dynamicList = [1, "Universitas MDP", true]; //Mirip array
+  print(dynamicList.runtimeType); //List<dynamic>
+  print(dynamicList[1]);
+  
+  //Set -> Untuk menghilankan yang ter-double
+  Set<int> mySet = new Set.from([1,2,3,4,2,1]);
+  print(mySet);
+  
+  
+  var setA = {1,2,3};
+  var setB = {1,5,7};
+  
+  //menambahkan 4 ke dalam setA
+  setA.add(4);
+  setA.remove(1);
+  print(mySet); //1,2,3,4
+  
+  //menghapus 7 dari setB
+  setB.remove(7);
+  print(setB);
+  
+  //union dan intersection
+  //coba gunakan fungsi union dan intersection pada setA dan setB
+  //apa yang dihasilkan dari fungsi union?
+  print(setA.union(setB));
+  //apa yang dihasilkan dari fungsi intersection?
+  print(setA.intersection(setB));
+  
+  
+  int angka1 = 10;
+  int angka2 = 5;
+  //Operator aritmatika
+  int hasilTambah = angka1 + angka2;
+  int hasilKali = angka1 * angka2;
+  //Operator perbandingan
+  bool hasilPerbandingan = angka1 > angka2;
+  bool hasilPerbandingan2 = angka1 == angka2;
+  //Operator logika
+  bool hasilLogika = (angka1 > 5) && (angka2 < 10);
+  print("Hasil Penambahan : $hasilTambah");
+  print("Hasil Perbandingan : $hasilPerbandingan");
+  print("Hasil Logika : $hasilLogika");
+  
+  
+  var primeNumber = [2,3,5,7,11,13,17,19];
+  var searchNumber = 13;
+  for(int i = 0; i < primeNumber.length; i++){
+    if(searchNumber == primeNumber[i]){
+      print("$searchNumber adalah bilangan prima ke-${i+1}");
+      //perbaiki - harusnya : 13 adalah bilangan prima ke-6
+      break;
+    }
+    print("$searchNumber != ${primeNumber[i]}");
+    //perbaiki - harusnya : 13 != 2 sd 11
+    }
+  }
